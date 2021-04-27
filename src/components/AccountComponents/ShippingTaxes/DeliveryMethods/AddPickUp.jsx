@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import {ReactComponent as Text} from '../../../../assets/icons/text.svg';
 
 
 const AddPickUp = () => {
@@ -16,6 +17,7 @@ const AddPickUp = () => {
                             <label>Minimum number of days</label>
                             <div className="input-group">
                                 <input type="text" className="formcontrol" placeholder="Enter number" />
+                                <Text className="profile-password-icon" />
                             </div>
                         </Col>
                     </Row>
@@ -25,6 +27,7 @@ const AddPickUp = () => {
                             <label>Maximum number of days</label>
                             <div className="input-group">
                                 <input type="text" className="formcontrol" placeholder="Enter number"/>
+                                <Text className="profile-password-icon" />
                             </div>
                         </Col>
                     </Row>

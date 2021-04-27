@@ -55,7 +55,7 @@ const Promotions = () => {
        createPromotion: false
     }))
 
-      console.log(option)
+      // console.log(option)
   }
 
  const cancelCreateOption = () =>{

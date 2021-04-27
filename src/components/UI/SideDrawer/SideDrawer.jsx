@@ -15,9 +15,8 @@ const SideDrawer = (props) => {
             <Backdrop show = {props.open} clicked = {props.closed} />
 
             <div>
-                {/* <div className="style-icon">  */}
-                    <Close show = {props.open} clicked = {props.closed}/>
-                {/* </div> */}
+                <Close show = {props.open} clicked = {props.closed} className="close-side"/>
+
                 <div className = {attachedClasses.join(' ')}>
                     {props.children}
                 </div>

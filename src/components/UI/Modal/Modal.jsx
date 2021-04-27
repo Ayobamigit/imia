@@ -1,11 +1,16 @@
 import React from 'react';
 import Backdrop from '../Backdrop/Backdrop';
 import './Modal.scss';
+import Close from '../Close/Close';
+
 
 const Modal = (props) => {
     return (
         <>
             <Backdrop show = {props.open} clicked = {props.modalClosed} />
+            <div style={{display:'flex'}}>
+            <Close show = {props.open} clicked = {props.modalClosed} className="close-modal"/>
+            
             <div 
                 className="Modal"
                 style = {{
@@ -15,6 +20,8 @@ const Modal = (props) => {
             >
                 {props.children}
             </div>
+            </div>
+            
         </>
     )
 }
