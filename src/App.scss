@@ -200,6 +200,10 @@ body{
   padding-top: 2px;
 }
 
+.text-right{
+  text-align: right !important;
+}
+
 .full-width{
   width: 100%;
 }
@@ -1192,17 +1196,21 @@ td:hover{
   fill: #B3B3B3;
 }
 
+.promotion-formIcons{
+  fill: var(--secondaryColor);
+}
+
 .create-promotion-option{
   border: 1px solid rgba(179, 179, 179, 0.25);
   box-sizing: border-box;
   border-radius: 2px;
   text-align: center;
-  padding: 25.5px 63.5px;
+  padding: 25.5px 0px 15px;
 }
 
 .create-promotion-option:hover{
   border: 2px solid var(--primaryColor);
-
+  cursor: pointer;
     .promotionIcons{
       fill: var(--fontColor);
     }
@@ -1217,4 +1225,15 @@ td:hover{
   color: var(--thirdColor);
   font-weight: 600;
   margin-top: 11px;
+}
+
+.create-promotion-desc{
+  margin-top: 24px;
+
+  p{
+    font-size: 14px;
+    color: var(--fifthColor);
+    line-height: 23px;
+    letter-spacing: 0.2px;
+  }
 }

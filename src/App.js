@@ -33,7 +33,8 @@ function App() {
       <Suspense fallback="f">
 
         {/* Sign In */}
-        <Route path='/log-in' exact component={MainLogin} />
+        <Route path='/' exact component={MainLogin} />
+        {/* <Route path='/log-in' exact component={MainLogin} /> */}
         <Route path='/reset-password' component={ForgotPassword} />
         <Route path='/create-account' component={SignUp} />
 

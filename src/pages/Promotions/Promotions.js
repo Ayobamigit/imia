@@ -19,8 +19,9 @@ const Promotions = () => {
     const [state, setState] = useState({
       promotionList : [1],
       createPromotion: false,
-      addPromotion: true,
-      route: 'ongoing'
+      addPromotion: false,
+      route: 'ongoing',
+      option:''
     })
 
     const cancelCreatePromotion = () =>{
@@ -46,7 +47,25 @@ const Promotions = () => {
       //   console.log(route)
    }
 
-    const {promotionList, addPromotion, createPromotion, route} = state;
+   const onClickOption = (value) =>{
+    setState(state=>({
+       ...state,
+       option: value,
+       addPromotion: true,
+       createPromotion: false
+    }))
+
+      console.log(option)
+  }
+
+ const cancelCreateOption = () =>{
+  setState(state=>({
+    ...state,
+    addPromotion: false
+  }))
+  }
+
+    const {promotionList, addPromotion, createPromotion, route, option} = state;
 
     const renderPages = () =>{
       switch(route) {
@@ -61,16 +80,31 @@ const Promotions = () => {
       }
    }
 
+   const renderOptions = () =>{
+    switch(option) {
+       case 'advertisement':
+          return <CreateAdvertisement />;
+       case 'discount':
+          return <CreateDiscount />;
+       case 'coupon':
+          return <CreateCoupon />;
+       default:
+          return null
+    }
+ }
+
     return (
       <>
       
 
-        {/* <Modal open={createPromotion} modalClosed = {cancelCreatePromotion}>
-          <CreatePromotion />
-        </Modal> */}
-        {/* <SideDrawer open={addPromotion} >
-          <CreateCoupon />
-        </SideDrawer> */}
+        <Modal open={createPromotion} modalClosed = {cancelCreatePromotion}>
+          <CreatePromotion 
+            onClickOption={onClickOption}
+          />
+        </Modal>
+        <SideDrawer open={addPromotion} closed={cancelCreateOption} >
+          {renderOptions()}
+        </SideDrawer>
 
         <Layout
           page = "Promotions"

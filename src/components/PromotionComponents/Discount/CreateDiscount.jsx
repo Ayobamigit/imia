@@ -29,7 +29,7 @@ const CreateDiscount = () => {
                             <label>Enter percentage discount</label>
                             <div className="input-group">
                                 <input type="text" className="formcontrol" placeholder="Enter percentage off" />
-                                <Percent className="profile-password-icon"/>
+                                <Percent className="profile-password-icon promotion-formIcons"/>
                             </div>
                         </Col>
                     </Row>
