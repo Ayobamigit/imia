@@ -1,0 +1,65 @@
+.signIn-header{
+    background-color: var(--mainColor);
+    text-align: center;
+    padding: 25px 0 10px;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.25);
+    font-family: var(--primaryFont);
+}
+
+.header-text{
+    color: var(--fifthColor);
+    font-size: 16px;
+    line-height: 20.75px;
+    font-weight: 600;
+}
+
+.header-heading{
+    color: var(--fontColor);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 20.75px;
+}
+
+.header-divider{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sign-in-desc{
+    font-family: var(--primaryFont);
+    background-color: #FAFAFA;
+}
+
+.signIn-img{
+    background-image: url(../../assets/img/Pix.jpg);
+    height: 580px;
+    // background-repeat: no-repeat; /* Do not repeat the image */
+    // background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.desc-sign{
+    padding: 48px 80px;
+    border-left: 1px solid rgba(179, 179, 179, 0.25);
+}
+
+.desc-header{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--fontColor);
+    margin-right: 20px;
+    letter-spacing: 0.3px;
+}
+
+.signIn-head{
+    color: var(--fontColor);
+    font-size: 18px;
+    line-height: 23.35px;
+    font-weight: 600;
+}
+
+.signIn-paragraph{
+    color: var(--fifthColor);
+    font-size: 14px;
+    line-height: 21px;
+}

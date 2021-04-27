@@ -1,0 +1,102 @@
+.SideBar{
+    background-color: #1A1A1A;
+    width: 280px;
+    height: 100vh;
+    padding: 0px 40px;
+    font-family: var(--primaryFont);
+}
+
+.Logo{
+    padding: 35px 0px 20px;
+    display:flex;  
+}
+
+.logo-tag{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.logo-text{
+    color: var(--fourthColor);
+    font-size: 16px;
+    // line-height: 21px;
+    margin-left: 15px;
+    padding-top: 9px;
+}
+
+.inline-divider{
+    border-right: 1.5px solid rgba(255, 255, 255, 0.25);
+    height: 15px;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.sidebar-divider{
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+
+.navigation-section{
+    margin-top: 40px;
+}
+
+.navigation-active{
+    list-style: none;
+    display: block;
+    padding: 0px;
+    margin-bottom: 25px;
+    a{
+        text-decoration: none;
+        font-size: 0.9rem;
+        line-height: 18px;
+        color: var(--primaryColor);
+        letter-spacing: 0.4px;
+    }
+}
+
+.activeIcon{
+    fill: var(--primaryColor);
+    margin-right: 13px;
+}
+
+.navigation-item{
+    list-style: none;
+    display: block;
+    padding: 0px;
+    margin-bottom: 25px;
+    a{
+        text-decoration: none;
+        font-size: 0.9rem;
+        line-height: 18px;
+        color: var(--fourthColor);
+        letter-spacing: 0.4px;
+    }
+}
+
+.navigation-item :hover{
+    cursor: pointer;
+
+    a{
+        color: var(--primaryColor);
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .sideIcons{
+        fill: var(--primaryColor);
+    }
+    
+}
+
+.sideIcons{
+    fill: #B3B3B3;
+    margin-right: 13px;
+}
+
+.logout-section{
+    bottom: 0;
+    position: fixed;
+}
+

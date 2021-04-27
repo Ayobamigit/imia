@@ -1,0 +1,17 @@
+.close-sideDrawer{
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    z-index: 200;
+    background-color: white;
+    transition: transform 0.3s ease-out; 
+    border-radius: 100%;
+}
+
+.close-sideDrawer:hover{
+    cursor: pointer;
+}
+
+.close-icon{
+    margin: 9px;
+}

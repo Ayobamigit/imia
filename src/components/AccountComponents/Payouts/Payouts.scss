@@ -1,0 +1,37 @@
+.payout-container{
+    margin: 40px 10px 90px;
+    padding-right: 75px;
+}
+
+.payout-info{
+    background-color: rgba(179, 179, 179, 0.1);
+    border-radius: 16px;
+    padding: 17px 0px 7px 25px;
+    font-family: var(--primaryFont);
+}
+
+.payout-text{
+    font-size: 14px;
+    color: var(--fifthColor);
+    line-height: 18.16px;
+    letter-spacing: 0.3px;
+}
+
+.table-payout{
+    margin-top: 30px;
+    font-family: var(--primaryFont);
+}
+
+.extra{
+    background-color: var(--mainColor);
+    margin-top: 25px;
+    padding: 10px 0 !important;
+}
+
+.hint-span{
+    margin-right: 18px;
+}
+
+.help-span{
+    margin-left: 11em;
+}

@@ -1,0 +1,27 @@
+.Header{
+    background-color: var(--mainColor);
+    height: 88px;
+    width:100%;
+    font-family: var(--primaryFont);
+}
+
+.header-row{
+    padding: 30px 70px;
+}
+
+.header-button{
+    background-color: var(--primaryColor);
+    border: none;
+    border-color: transparent;
+    border-radius: 50px;
+    color: var(--fontColor);
+    padding: 8.45px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-left: 70px;
+    cursor: pointer;
+}

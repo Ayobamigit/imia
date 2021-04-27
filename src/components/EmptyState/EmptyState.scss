@@ -1,0 +1,28 @@
+.empty-state{
+    text-align: center;
+    padding: 200px 0;
+    font-family: var(--primaryFont);
+}
+
+.empty-header{
+    font-size: 24px;
+    color: var(--fontColor);
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0.3px;
+}
+
+.empty-text{
+    color: var(--fifthColor);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.div-header{
+    margin-top: 28px;
+}
+
+.div-text{
+    margin-top: 10px;
+    padding: 0px 33%;
+}
