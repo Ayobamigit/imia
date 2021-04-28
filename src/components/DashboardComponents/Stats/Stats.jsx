@@ -23,7 +23,6 @@ const Stats = () => {
                 
             </div>
             <div className="stats-chart">
-fff
             </div>
         </div>
     )
