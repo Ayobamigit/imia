@@ -1,13 +1,17 @@
 import React from 'react';
-import Layout from '../../components/Layout/Layout';
+import { Container } from 'react-bootstrap';
+import Setup from '../../components/DashboardComponents/Setup/Setup';
+import DashboardLayout from '../../components/DashboardLayout/DashboardLayout';
 
 const Dashboard = () => {
     return (
-        <Layout
+        <DashboardLayout
             page = "Dashboard"
         >
-            hggggggg
-        </Layout>
+            <Container className="dashboard-container">
+                <Setup />
+            </Container>
+        </DashboardLayout>
     )
 }
 

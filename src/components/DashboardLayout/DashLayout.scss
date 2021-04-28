@@ -1,0 +1,21 @@
+#wrapper{
+    background-color:  #FAFAFA ;
+}
+
+#sidebar{
+    position: fixed;
+    margin-top: -88px;
+}
+
+#header{
+    margin-left: 280px;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
+
+#dashmain{
+    // margin: 40px 0px 40px 275px;
+    margin: 0px 0px 0px 220px;
+    background-color: #fff;
+}

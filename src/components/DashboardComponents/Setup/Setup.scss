@@ -1,0 +1,50 @@
+.setup{
+    background: #FAFAFA;
+    border-radius: 4px;
+    padding: 24px 32px 40px;
+    font-family: var(--primaryFont);
+}
+
+.setup-title{
+    font-size: 14px;
+    color: var(--secondaryColor);
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.setup-title-desc{
+    font-size: 14px;
+    color: var(--thirdColor);
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+
+.setup-title-title{
+    font-size: 16px;
+    color: var(--fontColor);
+    line-height: 15px;
+    // letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.progressBar{
+    background: rgba(179, 179, 179, 0.25);
+    border-radius: 0px 0px 4px 4px;  
+    height: 4px;
+    margin: inherit;
+}
+
+.create-progressBar-active{
+    background-color: #57A55F;
+    border-radius: 0px 0px 0px 4px;  
+}
+
+.setup-progressBar-active{
+    background-color: #57A55F;
+    border-radius: 0px 0px 4px 0px;  
+}
+
+.progressBar-active{
+    background-color: #57A55F;  
+}
