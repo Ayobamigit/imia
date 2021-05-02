@@ -10,8 +10,7 @@ const DashboardLayout = (props) => {
             <div id="header">
                 <Header
                     title={props.page}
-                    value={props.value}
-                    click={props.click}
+                    status={props.status}
                  />   
             </div>
 

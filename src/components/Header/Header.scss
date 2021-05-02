@@ -25,3 +25,14 @@
     margin-left: 70px;
     cursor: pointer;
 }
+
+.header-control{
+    border: 1px solid rgba(179, 179, 179, 0.25);
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 14px;
+    color: var(--thirdColor);
+    display: inline-flex;
+    line-height: 14px;
+    padding: 9px 12px;
+}

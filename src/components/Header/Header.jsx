@@ -21,6 +21,27 @@ const Header = (props) => {
                     :
                     null
                 }
+
+                {
+                    props.status ?
+                    <Col lg={3} sm={6}>
+                        <div className="header-control">
+                            <div className="switch mr-08">
+                                <span>
+                                    <input type="checkbox" disabled readOnly />
+                                    <span className={`slider round disabled `}></span>
+                                    {/* <span className={`slider roucnd ${disableSwitchButton ? 'disabled' : ''}`}></span> */}
+
+                                </span>
+                            </div>
+                            {props.status}
+                        </div>
+                    </Col>
+                    :
+                    null
+                }
+
+                
             
 
             </Row>
