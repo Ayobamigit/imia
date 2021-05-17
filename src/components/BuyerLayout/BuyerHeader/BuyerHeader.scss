@@ -1,0 +1,55 @@
+.buyer-header{
+    font-family: var(--primaryFont);
+}
+
+.primary-header{
+    padding: 11px 106px 5px;
+    text-align: end;
+    background-color: #FAFAFA;
+}
+
+.primary-header-text{
+    font-size: 14px;
+    line-height: 18.16px;
+    font-weight: 600;
+    color: var(--fontColor);
+}
+.secondary-header{
+    background-color: var(--mainColor);
+    padding: 16px 80px 9px;
+}
+
+.secondary-header-title{
+    color: var(--fontColor);
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 6px;
+}
+
+.secondary-header-margin{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.header-icon{
+    fill: var(--fontColor)
+}
+
+.secondary-general-button{
+    background-color: var(--primaryColor);
+    border: none;
+    border-color: transparent;
+    border-radius: 50px;
+    color: var(--fontColor);
+    padding: 0px 12px 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary-general-button:hover{
+cursor: pointer;
+}
+
+.header-icon{
+    fill: black;
+}

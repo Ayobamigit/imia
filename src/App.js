@@ -5,26 +5,34 @@ import {Route, BrowserRouter } from 'react-router-dom';
 //Importing Pages
 
 //Sign in
-const MainLogin = lazy(()=>import('./pages/SignIn/MainLogin/MainLogin'));
-const ForgotPassword = lazy(()=>import('./pages/SignIn/ForgotPassword/ForgotPassword'));
-const SignUp = lazy(()=>import('./pages/SignIn/SignUp/SignUp'));
+const MainLogin = lazy(()=>import('./pages/Merchant/SignIn/MainLogin/MainLogin'));
+const ForgotPassword = lazy(()=>import('./pages/Merchant/SignIn/ForgotPassword/ForgotPassword'));
+const SignUp = lazy(()=>import('./pages/Merchant/SignIn/SignUp/SignUp'));
 
 //Dashboard
-const Dashboard = lazy(()=>import('./pages/Dashboard/Dashboard'));
+const Dashboard = lazy(()=>import('./pages/Merchant/Dashboard/Dashboard'));
 
 //Products
-const Products = lazy(()=>import('./pages/Products/Products'));
-const AddProduct = lazy(()=>import('./pages/Products/AddProduct'));
+const Products = lazy(()=>import('./pages/Merchant/Products/Products'));
+const AddProduct = lazy(()=>import('./pages/Merchant/Products/AddProduct'));
 
 //Promotions
-const Promotions = lazy(()=>import('./pages/Promotions/Promotions'));
+const Promotions = lazy(()=>import('./pages/Merchant/Promotions/Promotions'));
 
 //Orders
-const Orders = lazy(()=>import('./pages/Orders/Orders'));
-const Order = lazy(()=>import('./pages/Orders/Order'));
+const Orders = lazy(()=>import('./pages/Merchant/Orders/Orders'));
+const Order = lazy(()=>import('./pages/Merchant/Orders/Order'));
 
 //Accounts
-const Account = lazy(()=>import('./pages/Account/Account'));
+const Account = lazy(()=>import('./pages/Merchant/Account/Account'));
+
+// Buyer routes
+
+//Home page
+const HomePage = lazy(()=>import('./pages/Buyer/HomePage/HomePage'));
+
+//Buyer-Account page
+const BuyerAccount = lazy(()=>import('./pages/Buyer/BuyerAccount/BuyerAccount'));
 
 function App() {
   return (
@@ -34,7 +42,7 @@ function App() {
 
         {/* Sign In */}
         <Route path='/' exact component={MainLogin} />
-        {/* <Route path='/log-in' exact component={MainLogin} /> */}
+        <Route path='/log-in' exact component={MainLogin} />
         <Route path='/reset-password' component={ForgotPassword} />
         <Route path='/create-account' component={SignUp} />
 
@@ -55,6 +63,15 @@ function App() {
 
          {/* Accounts */}
          <Route path='/manage-account' component={Account} />
+
+         {/* Buyer Module */}
+
+         {/* Buyer home page */}
+
+         <Route path='/home' component={HomePage} />
+
+          {/* Buyer home page */}
+         <Route path='/buyer-account' component={BuyerAccount} />
 
       </Suspense>
     </BrowserRouter>

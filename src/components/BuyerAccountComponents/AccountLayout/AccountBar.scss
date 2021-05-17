@@ -1,0 +1,61 @@
+.account-bar{
+    font-family: var(--primaryFont);
+    width: 300px;
+}
+
+.account-heading-text{
+    color: var(--secondaryColor);
+    font-size: 14px;
+    line-height: 18.16px;
+    letter-spacing: 0.7px;
+}
+
+.account-navigation{
+    margin-top: 26px;
+}
+
+.account-navigation-list{
+    list-style: none;
+    display: block;
+    padding: 0px;
+    margin-bottom: 25px;
+
+    .account-navigation-item{
+        color: var(--thirdColor);
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 21px;
+
+        .account-navigation-icon{
+            fill: var(--thirdColor);
+            margin-right: 14px;
+        }
+    }
+
+    .account-navigation-item:hover{
+        cursor: pointer;
+        color: var(--fontColor);
+    
+        .account-navigation-icon{
+            fill: var(--fontColor);
+        }
+    }
+
+    .account-navigation-active{
+        color: var(--fontColor);
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 21px;
+
+        .account-navigation-icon-active{
+            fill: var(--fontColor);
+            margin-right: 14px;
+        }
+    }
+}
+
+
+
+
+
+

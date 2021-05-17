@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Divider from '../../UI/Divider/Divider';
-import {ForgotPasswordContext} from '../../../pages/SignIn/ForgotPassword/ForgotPassword';
+import {ForgotPasswordContext} from '../../../pages/Merchant/SignIn/ForgotPassword/ForgotPassword';
 
 const ForgotPasswordForm = () => {
     const { sendCode} = useContext(ForgotPasswordContext);

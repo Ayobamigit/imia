@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { NavLink } from 'react-bootstrap';
-import { PromotionsContext } from '../../../pages/Promotions/Promotions';
+import { PromotionsContext } from '../../../pages/Merchant/Promotions/Promotions';
 
 const PromotionNav = () => {
     const { onRouteChange, state:{route}} = useContext(PromotionsContext);

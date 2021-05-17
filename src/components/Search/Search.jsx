@@ -6,7 +6,7 @@ const Search = (props) => {
     return (
         <div className="search-wrapper">
             <div className="search">
-                <input type="text" className="search-input" placeholder={props.placeholder}/>
+                <input type="text" className={`search-input ${props.className ? props.className : ''}`} placeholder={props.placeholder}/>
                 <button className="search-button">
                     <SearchIcon />
                 </button>

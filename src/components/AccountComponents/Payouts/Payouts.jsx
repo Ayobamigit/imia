@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import { Container } from 'react-bootstrap'
 import PayoutInfo from './PayoutInfo'
 import PayoutsTable from './PayoutsTable'
-import { AccountsContext } from '../../../pages/Account/Account';
+import { AccountsContext } from '../../../pages/Merchant/Account/Account';
 import EmptyState from '../../EmptyState/EmptyState';
 
 

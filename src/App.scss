@@ -83,6 +83,10 @@ body{
   margin-left: 0px;
 }
 
+.ml-05{
+  margin-left: 5px !important;
+}
+
 .ml-07{
   margin-left: 7px;
 }
@@ -95,8 +99,16 @@ body{
   margin-left: 14px;
 }
 
+.ml-20{
+  margin-left: 20px;
+}
+
 .ml-25{
   margin-left: 25px;
+}
+
+.inml-25{
+  margin-left: -25px;
 }
 
 .mr-10{
@@ -117,8 +129,14 @@ body{
 
 .mr-15{
   margin-right: 15px;
-}
 
+}
+.ml-30{
+  margin-left: 30px !important;
+}
+.ml-35{
+  margin-left: 35px !important;
+}
 .ml-40{
   margin-left: 40px !important;
 }
@@ -148,6 +166,10 @@ body{
   margin-top: 40px;
 }
 
+.mt-79{
+  margin-top: 79px;
+}
+
 .mt-25{
   margin-top: 25px;
 }
@@ -170,6 +192,10 @@ body{
 
 .mb-02{
   margin-bottom: 2px !important;
+}
+
+.mb-0{
+  margin-bottom: 0px !important;
 }
 
 .mt-05{
@@ -234,8 +260,20 @@ body{
   text-align: right !important;
 }
 
+.text-end{
+  text-align: end !important;
+}
+
 .full-width{
   width: 100%;
+}
+
+.width-90{
+  width: 90%;
+}
+
+.half-width{
+  width: 50% !important;
 }
 
 .page-name{
@@ -1266,4 +1304,12 @@ td:hover{
     line-height: 23px;
     letter-spacing: 0.2px;
   }
+}
+
+.buyer-manage-profile{
+  font-family: var(--primaryFont);
+  color: var(--fontColor);
+  font-size: 24px;
+  // line-height: 32px;
+  font-weight: 600;
 }

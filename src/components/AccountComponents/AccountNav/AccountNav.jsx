@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { NavLink } from 'react-bootstrap';
-import { AccountsContext } from '../../../pages/Account/Account';
+import { AccountsContext } from '../../../pages/Merchant/Account/Account';
 
 const AccountNav = () => {
     const { onRouteChange, state:{route}} = useContext(AccountsContext);
