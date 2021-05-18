@@ -59,10 +59,10 @@ const Promotions = () => {
   }
 
  const cancelCreateOption = () =>{
-  setState(state=>({
-    ...state,
-    addPromotion: false
-  }))
+    setState(state=>({
+      ...state,
+      addPromotion: false
+    }))
   }
 
     const {promotionList, addPromotion, createPromotion, route, option} = state;

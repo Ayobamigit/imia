@@ -13,35 +13,35 @@ const AccountNav = () => {
                         onClick={()=>onRouteChange('business')} 
                         className={route === 'business' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Business info</NavLink>
+                        Business info
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('payouts')} 
                         className={route === 'payouts' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Payouts</NavLink>
+                        Payouts
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('plans')} 
                         className= {route === 'plans' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Plans & Billing</NavLink>
+                        Plans & Billing
                     </li>
 
                     <li 
                         onClick={()=>onRouteChange('shipping')} 
                         className= {route === 'shipping' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Shipping & taxes</NavLink>
+                        Shipping & taxes
                     </li>
 
                     <li 
                         onClick={()=>onRouteChange('profile')} 
                         className= {route === 'profile' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Profile</NavLink>
+                        Profile
                     </li>
                </ul>
             </div> 

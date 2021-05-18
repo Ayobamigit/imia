@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import { NavLink } from 'react-bootstrap';
 import { PromotionsContext } from '../../../pages/Merchant/Promotions/Promotions';
 
 const PromotionNav = () => {
@@ -12,21 +11,21 @@ const PromotionNav = () => {
                         onClick={()=>onRouteChange('ongoing')} 
                         className={route === 'ongoing' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Ongoing</NavLink>
+                        Ongoing
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('expired')} 
                         className={route === 'expired' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Expired</NavLink>
+                        Expired
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('deactivated')} 
                         className= {route === 'deactivated' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Deactivated</NavLink>
+                        Deactivated
                     </li>
                </ul>
             </div> 

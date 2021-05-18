@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import { NavLink } from 'react-bootstrap';
 import { OrdersContext } from '../../../pages/Merchant/Orders/Orders';
 
 const OrderNav = () => {
@@ -12,21 +11,21 @@ const OrderNav = () => {
                         onClick={()=>onRouteChange('pending')} 
                         className={route === 'pending' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Pending (120)</NavLink>
+                       Pending (120)
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('fufilled')} 
                         className={route === 'fufilled' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Fulfilled (99)</NavLink>
+                        Fulfilled (99)
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('cancelled')} 
                         className= {route === 'cancelled' ? 'nav-li-active' : null}
                     >
-                        <NavLink to="#">Cancelled (14)</NavLink>
+                        Cancelled (14)
                     </li>
                </ul>
             </div> 

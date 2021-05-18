@@ -43,7 +43,7 @@ const BuyerAccount = () => {
                 onRouteChange,
                 state
             }}>
-                <Container fluid style={{margin:'80px'}}>
+                <Container fluid className="padding-size">
                     <div id="general">
                         <div id="bar">
                             <AccountBar />

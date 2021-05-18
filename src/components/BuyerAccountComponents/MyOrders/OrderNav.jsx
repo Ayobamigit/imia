@@ -1,35 +1,56 @@
 import React, {useContext} from 'react'
 import { BuyerOrdersContext } from './MyOrders';
-import { NavLink } from 'react-bootstrap';
 
 const OrderNav = () => {
-    const { onRouteChange, state:{route}} = useContext(BuyerOrdersContext);
+    const { onRouteChange, state:{route, pendingList, cancelledList, fulfilledList}} = useContext(BuyerOrdersContext);
 
     return (
-        <div className="Nav-Bar">
-           <div className="nav-navigation">
-               <ul className="nav-ul">
+        <div className="Order-Nav-Bar">
+           <div>
+               <ul className="Order-nav-ul">
                    <li 
                         onClick={()=>onRouteChange('pending')} 
-                        className={route === 'pending' ? 'nav-li-active' : null}
+                        className={route === 'pending' ? 'nav-li-active' : ""}
                     >
-                        <NavLink to="#">Pending (0)</NavLink>
+                        Pending (
+                            {
+                                pendingList.length ?
+                                pendingList.length
+                                :
+                                '0'
+                            }
+                        )
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('fufilled')} 
-                        className={route === 'fufilled' ? 'nav-li-active' : null}
+                        className={route === 'fufilled' ? 'nav-li-active' : ""}
                     >
-                        <NavLink to="#">Fulfilled (0)</NavLink>
+                        Fulfilled (
+                            {
+                                fulfilledList.length ?
+                                fulfilledList.length
+                                :
+                                '0'
+                            }
+                        )
                     </li>
 
                    <li 
                         onClick={()=>onRouteChange('cancelled')} 
-                        className= {route === 'cancelled' ? 'nav-li-active' : null}
+                        className= {route === 'cancelled' ? 'nav-li-active' : ""}
                     >
-                        <NavLink to="#">Cancelled (tre)</NavLink>
+                        Cancelled (
+                            {
+                                cancelledList.length ?
+                                cancelledList.length
+                                :
+                                '0'
+                            }
+                        )
                     </li>
                </ul>
+               <div className="border-ash"></div>
             </div> 
         </div>
     )

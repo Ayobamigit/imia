@@ -20,7 +20,7 @@ const Ongoing = () => {
                     </div>
                     <Divider />
                     <div className="promotion-footer-div inmt-22">
-                       <Percent className="mr-10" /> 
+                       <Percent className="mr-10 promotionIcons" /> 
                        <h3 className="promotion-footer-text">Discount · ends 22 Jan 2021</h3>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import './EmptyState.scss';
 
 const EmptyState = (props) => {
     return (
-        <div className="empty-state">
+        <div className={`empty-state ${props.className ? props.className: ''}`}>
             <Icon />
             <div className="div-header">
                 <h6 className="empty-header">{props.title}</h6>
@@ -14,6 +14,10 @@ const EmptyState = (props) => {
             <div className="div-text">
                 <p className="empty-text">{props.text}</p>
             </div>
+
+            <button className="general-button">
+                {props.button}
+            </button>
         </div>
     )
 }
