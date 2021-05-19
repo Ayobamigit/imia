@@ -37,7 +37,7 @@ const IndividualOrder = () => {
                             </Col>
                         </Row>
 
-                        <Divider />
+                        <Divider /> {/* Pass a className down as a prop setting the margin top and bottom for the divider to overide what is in the divider.scss */}
 
                         <Row className="inmt-15 inmb-10">
                             <Col lg={2}>

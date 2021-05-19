@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import './App.scss';
-import {Route, BrowserRouter } from 'react-router-dom';
+import {Route, BrowserRouter, Switch } from 'react-router-dom';
 
 //Importing Pages
 
@@ -39,40 +39,41 @@ function App() {
     <>
     <BrowserRouter>
       <Suspense fallback="f">
+        <Switch>
+          {/* Sign In */}
+          <Route path='/' exact component={MainLogin} />
+          <Route path='/log-in' exact component={MainLogin} />
+          <Route path='/reset-password' component={ForgotPassword} />
+          <Route path='/create-account' component={SignUp} />
 
-        {/* Sign In */}
-        <Route path='/' exact component={MainLogin} />
-        <Route path='/log-in' exact component={MainLogin} />
-        <Route path='/reset-password' component={ForgotPassword} />
-        <Route path='/create-account' component={SignUp} />
+          {/* Dashboard */}
+          <Route path='/dashboard' component={Dashboard} />
 
-        {/* Dashboard */}
-        <Route path='/dashboard' component={Dashboard} />
+          {/* Products */}
+          <Route path='/products' component={Products} />
+          <Route path='/add-product' component={AddProduct} />
 
-        {/* Products */}
-        <Route path='/products' component={Products} />
-        <Route path='/add-product' component={AddProduct} />
+          {/* Orders */}
+          <Route path='/orders' component={Orders} />
+          <Route path='/order/:id' exact component={Order} />
 
-        {/* Orders */}
-        <Route path='/orders' component={Orders} />
-        <Route path='/order/:id' exact component={Order} />
-
-        {/* Promotions */}
-        <Route path='/promotions' component={Promotions} />
+          {/* Promotions */}
+          <Route path='/promotions' component={Promotions} />
 
 
-         {/* Accounts */}
-         <Route path='/manage-account' component={Account} />
+          {/* Accounts */}
+          <Route path='/manage-account' component={Account} />
 
-         {/* Buyer Module */}
-
-         {/* Buyer home page */}
-
-         <Route path='/home' component={HomePage} />
+          {/* Buyer Module */}
 
           {/* Buyer home page */}
-         <Route path='/buyer-account' component={BuyerAccount} />
 
+          <Route path='/home' component={HomePage} />
+
+            {/* Buyer home page */}
+          <Route path='/buyer-account' exact component={BuyerAccount} />
+          <Route path='/buyer-account/:id' exact component={BuyerAccount} />
+        </Switch>
       </Suspense>
     </BrowserRouter>
     </>

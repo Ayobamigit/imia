@@ -72,7 +72,7 @@ const ReportOrder = () => {
                                     </select>
                                 </div>
 
-                                <Trash className="mt-10 cursor-pointer visibility-hidden" />
+                                <Trash className="mt-10 report-icon cursor-pointer visibility-hidden" />
 
                             </Col>
 
@@ -112,7 +112,7 @@ const ReportOrder = () => {
                                     </select>
                                 </div>
 
-                                <Trash className="mt-10 cursor-pointer visibility-hidden" />
+                                <Trash className="mt-10 report-icon cursor-pointer visibility-hidden" />
 
                             </Col>
 
@@ -136,7 +136,7 @@ const ReportOrder = () => {
                                     </select>
                                 </div>
 
-                                <Trash className="mt-10 cursor-pointer" />
+                                <Trash className="report-icon mt-10 cursor-pointer" />
 
                             </Col>
 

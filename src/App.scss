@@ -79,6 +79,9 @@ body{
     background-color: #464c70;
 }
 
+.no-margin{
+  margin: 0px !important;
+}
 .ml-5{
   margin-left: 0px;
 }
@@ -245,7 +248,11 @@ body{
 }
 
 .mb-10{
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
+}
+
+.mb-12{
+  margin-bottom: 12px !important;
 }
 
 .mb-120{
@@ -654,9 +661,18 @@ td:hover{
 .formgroup label{
   color: var(--fontColor);
   font-size: 14px;
-  line-height: 18px;
+  line-height: 14px;
+  // line-height: 18px;
   font-weight: 600;
   letter-spacing: 0.45px;
+}
+
+label{
+  color: var(--fontColor);
+  font-size: 14px;
+  line-height: 14px;
+  // font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .formgroup p{
@@ -1574,4 +1590,95 @@ td:hover{
 
 .visibility-hidden{
   visibility: hidden;
+}
+
+.country-div{
+  padding: 24px
+}
+
+.account-dropdown-div{
+  padding: 19px 18px 0px;
+}
+
+.country-drop{
+  // position: absolute;
+  right: 0;
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.account-drop{
+  // position: absolute;
+  margin-top: 6.5%;
+  right: 0;
+  margin-right: 22%;
+}
+
+.dropdown-list{
+  list-style: none;
+  display: block;
+  padding: 0px;
+  // margin-bottom: 25px;
+
+  a{
+    color: var(--fontColor);
+    font-size: 14px;
+    margin-bottom: 17px;
+    text-decoration: none;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+  }
+
+  .drop-icon{
+    fill: var(--fontColor);
+    margin-right: 10px;
+  }
+
+  li{
+    margin-bottom: 10px;
+  }
+
+  :hover{
+      cursor: pointer;
+
+      a{
+        color: var(--primaryColor);
+        text-decoration: none;
+      }
+
+     .drop-icon{
+        fill: var(--primaryColor);
+      }
+  }
+}
+
+.basket-empty-text{
+  color: var(--fourthColor);
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.report-icon{
+  fill: var(--thirdColor);
+}
+
+.basket-icon{
+  fill: var(--mainColor);
+}
+
+.basket-icon-extra{
+  fill: var(--fontColor);
+}
+
+.basket-increase{
+  background: #FAFAFA;
+  border-radius: 50px;
+  padding: 5px 11px;
+  text-align: center;
+}
+
+.basket-order-value{
+  font-size: 14px;
+  color: var(--fontColor);
+  margin: 15px;
 }

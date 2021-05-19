@@ -71,7 +71,7 @@ const AddAddress = () => {
                         </Col>
                     </Row>
 
-                    <Divider />
+                    <Divider /> {/* Pass a className down as a prop setting the margin top and bottom for the divider to overide what is in the divider.scss */}
 
                     <Row style={{marginTop:'-20px', marginBottom:'-20px'}}>
 

@@ -11,7 +11,7 @@ const Pending = () => {
     const id="#23190FHB";
     return (
         <div>
-           {
+           { //do a double check here while integrating and for other places like this pendingList? pendingList.length === 0?
                pendingList.length === 0 ?
                <EmptyState 
                     className="padding-100"
