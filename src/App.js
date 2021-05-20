@@ -34,6 +34,9 @@ const HomePage = lazy(()=>import('./pages/Buyer/HomePage/HomePage'));
 //Buyer-Account page
 const BuyerAccount = lazy(()=>import('./pages/Buyer/BuyerAccount/BuyerAccount'));
 
+//Check out page
+const CheckOut = lazy(()=>import('./pages/Buyer/CheckOut/CheckOut'));
+
 function App() {
   return (
     <>
@@ -70,9 +73,12 @@ function App() {
 
           <Route path='/home' component={HomePage} />
 
-            {/* Buyer home page */}
+          {/* Buyer home page */}
           <Route path='/buyer-account' exact component={BuyerAccount} />
           <Route path='/buyer-account/:id' exact component={BuyerAccount} />
+
+          {/* Check Out page */}
+          <Route path='/checkout' exact component={CheckOut} />
         </Switch>
       </Suspense>
     </BrowserRouter>

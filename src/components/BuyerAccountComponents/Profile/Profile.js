@@ -93,9 +93,9 @@ const Profile = () => {
                                 </Col>
                             </Row>
 
-                            <div className=" general-button">
+                            <button className="general-button" disabled>
                                 Save Changes
-                            </div>
+                            </button>
                         </form>
                     </div>
 
@@ -133,9 +133,9 @@ const Profile = () => {
                                 </Col>
                             </Row>
 
-                            <div className=" general-button">
+                            <button className="general-button" disabled>
                             Change Password
-                            </div>
+                            </button>
                         </form>
                     </div>
 

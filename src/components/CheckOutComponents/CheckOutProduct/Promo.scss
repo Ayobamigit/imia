@@ -1,0 +1,45 @@
+.promo-wrapper{
+    font-family: var(--primaryFont);
+}
+
+.promo{
+  width: 100%;
+  position: relative;
+  display: flex;
+
+}
+
+.promo-input{
+  background-color:  rgba(179, 179, 179, 0.15);
+  border: none;
+  border-right: none;
+  height: 40px;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18;
+  color: var(--fontColor);
+  letter-spacing: 0.2px;
+  width: 70%;
+}
+
+.promo-input::placeholder{
+    color: var(--secondaryColor);
+}
+
+.promo-button{
+    height: 40px;
+    border: none;
+    background: var(--fontColor);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 11px 24px;  
+    line-height: 0 !important;
+}
+
+

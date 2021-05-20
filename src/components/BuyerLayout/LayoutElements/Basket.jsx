@@ -7,10 +7,12 @@ import {ReactComponent as Watch} from '../../../assets/icons/watch.svg';
 import {ReactComponent as Trash} from '../../../assets/icons/bin.svg';
 import {ReactComponent as Minus} from '../../../assets/icons/minus.svg';
 import {ReactComponent as Plus} from '../../../assets/icons/plus.svg';
+import { useHistory } from 'react-router';
 
 
 
 const Basket = () => {
+    const history = useHistory();
     const {state:{basketList}}= useContext(BuyerLayoutContext);
     return (
         <div className="address-div">
@@ -95,7 +97,7 @@ const Basket = () => {
                             </Col>
                     </Row>
 
-                    <div className="general-button full-width">
+                    <div className="general-button full-width" onClick={()=>{history.push('/checkout')}}>
                         Checkout now
                     </div>
 

@@ -79,6 +79,14 @@ body{
     background-color: #464c70;
 }
 
+button[disabled]:hover {
+  cursor: not-allowed;
+}
+
+button[disabled]{
+  opacity: 0.3;
+}
+
 .no-margin{
   margin: 0px !important;
 }
@@ -191,11 +199,15 @@ body{
 }
 
 .mt-25{
-  margin-top: 25px;
+  margin-top: 25px !important;
 }
 
 .mt-10{
   margin-top: 10px !important;
+}
+
+.mt-15{
+  margin-top: 15px !important;
 }
 
 .mt-14{
@@ -207,7 +219,7 @@ body{
 }
 
 .mt-16{
-  margin-top: 16px;
+  margin-top: 16px !important;
 }
 
 .mt-100{
@@ -220,6 +232,10 @@ body{
 
 .mb-24{
   margin-bottom: 24px !important;
+}
+
+.mb-26{
+  margin-bottom: 26px !important;
 }
 
 
@@ -1681,4 +1697,23 @@ label{
   font-size: 14px;
   color: var(--fontColor);
   margin: 15px;
+}
+
+.checkout-product-div{
+  background: #FAFAFA;
+  padding: 70px 100px;
+  font-family: var(--primaryFont);
+}
+
+.inline-input{
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  right: 0;
+}
+
+.inline-input-promo{
+  margin-right: 33%;
+  font-size: 14px;
+  color: var(--thirdColor);
 }
