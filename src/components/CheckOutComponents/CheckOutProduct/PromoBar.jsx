@@ -1,20 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './Promo.scss';
+import { CheckoutContext } from '../../../pages/Buyer/CheckOut/CheckOut';
 
-const PromoBar = (props) => {
+const PromoBar = () => {
+    const {onApplyCode, onChange, removeDisount, state:{discount, discountButton, discountCode}} = useContext(CheckoutContext)
     return (
         <div className="promo-wrapper">
             <div className="promo">
-                <input type="text" className="promo-input" placeholder="Enter discount code" name="discountCode" onChange={props.onChange} value={props.discountCode}/>
+                <input type="text" className="promo-input" placeholder="Enter discount code" name="discountCode" onChange={onChange} value={discountCode}/>
                 {
-                    props.discount ?
-                    <p className="inline-input inline-input-promo" onClick = {props.removeDisount}><u>Remove</u></p>
+                    discount ?
+                    <p className="inline-input inline-input-promo" onClick = {removeDisount}><u>Remove</u></p>
                     :
                     null
                 }
-                <button className="promo-button" onClick = {props.onApplyCode} disabled={props.discountButton}>
+                <button className="promo-button" onClick = {onApplyCode} disabled={discountButton}>
                     {
-                        props.discount ?
+                        discount ?
                         'Applied'
                         :
                         'Apply code'

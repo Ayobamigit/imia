@@ -8,7 +8,7 @@ import { CheckoutContext } from '../../../pages/Buyer/CheckOut/CheckOut';
 
 
 const CheckOutProduct = () => {
-    const {onApplyCode, onChange, removeDisount, state:{discount, discountButton, discountCode, deliveryMethod, shippingCost, taxValue}} = useContext(CheckoutContext)
+    const {state:{discount, shipping, shippingCost, taxValue}} = useContext(CheckoutContext)
     return (
         <div className="checkout-product-div">
             <Row>
@@ -69,14 +69,7 @@ const CheckOutProduct = () => {
 
             <Divider className="mt-16 mb-24" /> 
 
-            <PromoBar 
-                onChange={onChange}
-                onApplyCode={onApplyCode} 
-                discountButton={discountButton}
-                discount = {discount}
-                removeDisount={removeDisount}
-                discountCode={discountCode}
-            />
+            <PromoBar />
 
             <Divider className="mt-24" />
 
@@ -92,7 +85,7 @@ const CheckOutProduct = () => {
             <Row className="mt-14">
                 <Col lg={6}>
                     {
-                        deliveryMethod.toLowerCase() === 'shipping' ?
+                        shipping ?
                         <h3 className="individual-summary">Shipping</h3>
                         :
                         <h3 className="individual-summary">Pickup</h3>
@@ -101,7 +94,7 @@ const CheckOutProduct = () => {
                 <Col lg={6}>
                     <h3 className="individual-info">
                         {
-                           deliveryMethod.toLowerCase() === 'shipping' ?
+                          shipping ?
                             shippingCost ? 
                               '$10.86'
                             :

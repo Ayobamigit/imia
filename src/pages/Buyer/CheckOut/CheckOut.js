@@ -1,18 +1,27 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import CheckOutDetails from '../../../components/CheckOutComponents/CheckOutDetails/CheckOutDetails';
 import CheckOutProduct from '../../../components/CheckOutComponents/CheckOutProduct/CheckOutProduct';
 
 export const CheckoutContext = createContext();
 
 const CheckOut = () => {
+
+    const authToken = false;
     const [state, setState] = useState({
-        deliveryMethod: 'shipping',
+        shipping: true,
         discount: false,
         discountCode:'',
         discountButton: true,
         shippingCost :'',
-        taxValue:''
+        taxValue:'',
+        isPickupAvailable: true,
+        address: true,
+        checked: false,
+        addNewAddress: false
     })
+
+    const {shipping, isPickupAvailable, checked, addNewAddress} = state
 
     const onApplyCode = () =>{
         setState(state=>({
@@ -45,15 +54,72 @@ const CheckOut = () => {
             discount: false
         }))
     }
+
+    const onClickDelivery = () =>{
+        if(isPickupAvailable){
+            setState(state=>({
+                ...state,
+                shipping: !shipping
+            }))
+        }else{
+            setState(state=>({
+                ...state,
+                shipping: true
+            }))
+        }
+        
+    }
+
+    const onChangeCheckBox = () =>{
+        setState(state=>({
+            ...state,
+            checked : !checked
+        }))
+    }
+
+    const onClickCheckBox = () =>{
+        setState(state=>({
+            ...state,
+            addNewAddress : true
+            // addNewAddress : !addNewAddress
+        }))
+    }
+
+    const displayAddress = () =>{
+        if(addNewAddress){
+            setState(state=>({
+                ...state,
+                address: false
+            }))
+        }
+        // else{
+        //     setState(state=>({
+        //         ...state,
+        //         address: true
+        //     }))
+        // }
+    }
+// This runs whenever the use new address button is clicked. Display address chows the shipping address form
+    useEffect(() => {
+        displayAddress()
+    }, [addNewAddress])
+
+
     return (
         <CheckoutContext.Provider value={{
             onApplyCode,
             onChange,
             removeDisount,
+            onClickDelivery,
+            onChangeCheckBox,
+            onClickCheckBox,
+            authToken,
             state
         }}>
         <Row>
-            <Col lg={7} style={{backgroundColor: '#fff'}}></Col>
+            <Col lg={7} style={{backgroundColor: '#fff', padding :'0px'}}>
+                <CheckOutDetails />
+            </Col>
             <Col lg={5}>
                 <CheckOutProduct />
             </Col>
