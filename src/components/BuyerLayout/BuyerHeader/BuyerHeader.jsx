@@ -7,6 +7,7 @@ import {ReactComponent as Down} from '../../../assets/icons/down.svg';
 import {ReactComponent as WishList} from '../../../assets/icons/heart.svg';
 import {ReactComponent as Basket} from '../../../assets/icons/orders.svg';
 import { BuyerLayoutContext } from '../BuyerLayout';
+import { Link } from 'react-router-dom';
 
 
 const BuyerHeader = () => {
@@ -14,7 +15,7 @@ const BuyerHeader = () => {
     return (
         <div className="buyer-header">
             <div className="primary-header">
-                <h3 className="primary-header-text"><span className=" cursor-pointer">Vendors</span><span className="ml-35 cursor-pointer">Help</span> <span className="ml-35 cursor-pointer" onClick={()=>{onClickDropDown('country')}}>/ English/ USD <Down /></span></h3>
+                <h3 className="primary-header-text"><span className=" cursor-pointer"><Link to="vendor-log-in">Vendors</Link></span><span className="ml-35 cursor-pointer">Help</span> <span className="ml-35 cursor-pointer" onClick={()=>{onClickDropDown('country')}}>/ English/ USD <Down /></span></h3>
             </div>
             <div className="secondary-header">
                 <Row>
@@ -45,7 +46,7 @@ const BuyerHeader = () => {
                             </Col>
                             <Col lg={4} className="display-flex">
                                 <WishList />
-                                <h4 className="primary-header-text secondary-header-margin  cursor-pointer">Wishlist</h4>
+                                <h4 className="primary-header-text secondary-header-margin  cursor-pointer"><Link to="wishlist">Wishlist</Link></h4>
                             </Col>
                             <Col lg={4} className="inml-25">
                                 <button className="secondary-general-button"  onClick={ ()=>{onOpenSideBar('basket')} }>

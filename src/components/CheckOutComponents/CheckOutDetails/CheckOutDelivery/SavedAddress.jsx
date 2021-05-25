@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import Divider from '../../../UI/Divider/Divider';
 import { CheckoutContext } from '../../../../pages/Buyer/CheckOut/CheckOut';
-import { Col, Row } from 'react-bootstrap';
 
 const SavedAddress = () => {
     const { state:{addNewAddress}, onClickCheckBox } = useContext(CheckoutContext)

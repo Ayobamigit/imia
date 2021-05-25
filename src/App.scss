@@ -727,6 +727,26 @@ label{
   cursor: pointer;
 }
 
+.prev-button{
+  background-color:#FAFAFA;
+  border: 1px solid rgba(179, 179, 179, 0.25);;
+  // border-color: transparent;
+  border-radius: 50px;
+  color: var(--fontColor);
+  padding: 8.45px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  // margin-left: 70px;
+}
+
+.prev-button:hover{
+  cursor: pointer;
+}
+
 .danger-button{
   background-color: #F27070;
   border: none;
@@ -1712,6 +1732,11 @@ label{
   margin: 15px;
 }
 
+.checkout-success{
+  font-family: var(--primaryFont);
+  padding: 150px 500px 200px;
+}
+
 .checkout-product-div{
   background: #FAFAFA;
   padding: 70px 100px;
@@ -1719,7 +1744,7 @@ label{
 }
 
 .checkout-details-div{
-  padding: 23px 80px;
+  padding: 23px 80px 200px 80px;
   font-family: var(--primaryFont);
 }
 
@@ -1949,4 +1974,23 @@ button span{
   border-radius: 100px;
   background-color: var(--fontColor);
   background-clip: padding-box;
+}
+
+.empty-header{
+  font-size: 24px;
+  color: var(--fontColor);
+  font-weight: 600;
+  line-height: 31px;
+  letter-spacing: 0.3px;
+}
+
+.empty-text{
+  color: var(--fifthColor);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.wishlist{
+  padding: 80px 240px;
+  font-family: var(--primaryFont);
 }

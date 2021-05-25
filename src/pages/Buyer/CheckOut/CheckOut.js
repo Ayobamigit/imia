@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import CheckOutDetails from '../../../components/CheckOutComponents/CheckOutDetails/CheckOutDetails';
 import CheckOutProduct from '../../../components/CheckOutComponents/CheckOutProduct/CheckOutProduct';
 
@@ -7,7 +8,7 @@ export const CheckoutContext = createContext();
 
 const CheckOut = () => {
 
-    const authToken = false;
+    const authToken = true;
     const [state, setState] = useState({
         shipping: true,
         discount: false,
@@ -18,8 +19,11 @@ const CheckOut = () => {
         isPickupAvailable: true,
         address: true,
         checked: false,
-        addNewAddress: false
+        addNewAddress: false,
+        shipType:''
     })
+
+    const history = useHistory();
 
     const {shipping, isPickupAvailable, checked, addNewAddress} = state
 
@@ -99,11 +103,23 @@ const CheckOut = () => {
         //     }))
         // }
     }
-// This runs whenever the use new address button is clicked. Display address chows the shipping address form
+
+    const onShippingChange = (label, price) =>{
+        setState(state=>({
+            ...state,
+            shipType: label,
+            shippingCost: price
+        }))
+    }
+
+// This runs whenever the use new address button is clicked. Display address shows the shipping address form
     useEffect(() => {
         displayAddress()
     }, [addNewAddress])
 
+    const onCheckOut = () =>{
+        history.push('/checkout-success')
+    }
 
     return (
         <CheckoutContext.Provider value={{
@@ -113,6 +129,8 @@ const CheckOut = () => {
             onClickDelivery,
             onChangeCheckBox,
             onClickCheckBox,
+            onCheckOut,
+            onShippingChange,
             authToken,
             state
         }}>

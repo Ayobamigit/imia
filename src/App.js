@@ -36,6 +36,10 @@ const BuyerAccount = lazy(()=>import('./pages/Buyer/BuyerAccount/BuyerAccount'))
 
 //Check out page
 const CheckOut = lazy(()=>import('./pages/Buyer/CheckOut/CheckOut'));
+const CheckOutSuccess = lazy(()=>import('./pages/Buyer/CheckOut/CheckOutSuccess'));
+
+//Wishlist page
+const Wishlist = lazy(()=>import('./pages/Buyer/Wishlist/Wishlist'));
 
 function App() {
   return (
@@ -45,7 +49,7 @@ function App() {
         <Switch>
           {/* Sign In */}
           <Route path='/' exact component={MainLogin} />
-          <Route path='/log-in' exact component={MainLogin} />
+          <Route path='/vendor-log-in' exact component={MainLogin} />
           <Route path='/reset-password' component={ForgotPassword} />
           <Route path='/create-account' component={SignUp} />
 
@@ -79,6 +83,11 @@ function App() {
 
           {/* Check Out page */}
           <Route path='/checkout' exact component={CheckOut} />
+          <Route path='/checkout-success' exact component={CheckOutSuccess} />
+
+          {/* Wishlist page */}
+          <Route path='/wishlist' exact component={Wishlist} />
+
         </Switch>
       </Suspense>
     </BrowserRouter>

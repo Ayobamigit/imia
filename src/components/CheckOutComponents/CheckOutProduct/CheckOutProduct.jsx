@@ -96,7 +96,7 @@ const CheckOutProduct = () => {
                         {
                           shipping ?
                             shippingCost ? 
-                              '$10.86'
+                              shippingCost
                             :
                           <p className="individual-info-info">Calculated at next step</p>
                            :
