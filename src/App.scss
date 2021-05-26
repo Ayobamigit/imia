@@ -239,6 +239,10 @@ button[disabled]{
   margin-bottom: 20px;
 }
 
+.mb-80{
+  margin-bottom: 80px;
+}
+
 .mb-24{
   margin-bottom: 24px !important;
 }
@@ -705,6 +709,11 @@ label{
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
+}
+
+.general-body{
+  padding: 80px;
+  font-family: var(--primaryFont);
 }
 
 .general-button{

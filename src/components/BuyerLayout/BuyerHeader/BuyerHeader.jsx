@@ -15,7 +15,7 @@ const BuyerHeader = () => {
     return (
         <div className="buyer-header">
             <div className="primary-header">
-                <h3 className="primary-header-text"><span className=" cursor-pointer"><Link to="vendor-log-in">Vendors</Link></span><span className="ml-35 cursor-pointer">Help</span> <span className="ml-35 cursor-pointer" onClick={()=>{onClickDropDown('country')}}>/ English/ USD <Down /></span></h3>
+                <h3 className="primary-header-text"><span className=" cursor-pointer"><Link to="vendor-log-in">Vendors portal</Link></span><span className="ml-35 cursor-pointer">Help</span> <span className="ml-35 cursor-pointer" onClick={()=>{onClickDropDown('country')}}>/ English/ USD <Down /></span></h3>
             </div>
             <div className="secondary-header">
                 <Row>

@@ -20,7 +20,7 @@ import Black from '../../assets/img/black.png';
 
 const ProductGrid = () => {
     return (
-        <div className="grid-container mt-40">
+        <div className="grid-container mt-40 mb-80">
             <div className="grid-item">
                 <div className="product">
                     <Shoe />
@@ -101,9 +101,8 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            {/* <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Cream} alt="Profile"/>
 
                 </div>
@@ -121,11 +120,10 @@ const ProductGrid = () => {
                     <Star className="star star-active" />
                     <span className="quantity">(240)</span>
                 </div>
-            </div> 
+            </div>  */}
 
-            <div className="grid-item">
+            {/* <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={White} alt="Profile"/>
                 </div>
 
@@ -146,7 +144,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Brown} alt="Profile"/>
                 </div>
 
@@ -167,7 +164,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Ring} alt="Profile"/>
                 </div>
 
@@ -188,7 +184,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Okro} alt="Profile"/>
 
                 </div>
@@ -210,7 +205,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Balm} alt="Profile"/>
                 </div>
 
@@ -231,7 +225,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Tissue} alt="Profile"/>
                 </div>
 
@@ -252,7 +245,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Phone} alt="Profile"/>
                 </div>
 
@@ -273,7 +265,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Heels} alt="Profile"/>
                 </div>
 
@@ -294,7 +285,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Pawpaw} alt="Profile"/>
                 </div>
 
@@ -315,7 +305,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Akara} alt="Profile"/>
                 </div>
 
@@ -336,7 +325,6 @@ const ProductGrid = () => {
 
             <div className="grid-item">
                 <div className="product">
-                    {/* <Shoe /> */}
                     <img src={Black} alt="Profile"/>
                 </div>
 
@@ -353,7 +341,7 @@ const ProductGrid = () => {
                     <Star className="star star-active" />
                     <span className="quantity">(240)</span>
                 </div>
-            </div> 
+            </div>  */}
 
         </div>
     )

@@ -1,0 +1,39 @@
+.sidemenu-heading-text{
+    color: var(--secondaryColor);
+    font-size: 14px;
+    line-height: 18.16px;
+    letter-spacing: 0.7px;
+}
+
+.side-navigation{
+    margin-top: 26px;
+}
+
+.sidemenu-list{
+    list-style: none;
+    display: block;
+    padding: 0px;
+    margin-bottom: 25px;
+
+    li{
+        color: var(--thirdColor);
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 21px;
+
+        .side-navigation-icon{
+            fill: var(--thirdColor);
+            margin-right: 14px;
+        }
+    }
+
+    li:hover{
+        cursor: pointer;
+        color: var(--fontColor);
+    
+        .side-navigation-icon{
+            fill: var(--fontColor);
+        }
+    }
+
+}
