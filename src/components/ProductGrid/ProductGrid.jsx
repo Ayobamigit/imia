@@ -20,7 +20,7 @@ import Black from '../../assets/img/black.png';
 
 const ProductGrid = () => {
     return (
-        <div className="grid-container mt-40">
+        <div className="grid-container mt-40 mb-80">
             <div className="grid-item">
                 <div className="product">
                     <Shoe />
