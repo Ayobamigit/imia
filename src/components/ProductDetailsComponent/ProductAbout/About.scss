@@ -1,0 +1,29 @@
+.spec-row{
+    display: grid;
+    margin-top: 12px;
+    grid-template-columns: 180px auto;
+    grid-column-gap: 12px;
+}
+
+.spec-col{
+    padding: 16px 24px;
+}
+
+.spec-row:nth-child(odd){
+    .spec-col{
+        background-color: rgba(179, 179, 179, 0.1);
+    }
+}
+
+.spec-row:nth-child(even){
+    .spec-col{
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+.product-text{
+    font-size: 16px;
+    color: var(--fifthColor);
+    line-height: 24px;
+    margin-bottom: 0px;
+}

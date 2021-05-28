@@ -1617,7 +1617,7 @@ label{
 }
 
 .text-dark{
-  color: var(--fontColor);
+  color: var(--fontColor) !important;
 }
 
 .buyer-individual-order{
@@ -2002,4 +2002,8 @@ button span{
 .wishlist{
   padding: 80px 240px;
   font-family: var(--primaryFont);
+}
+
+.about-product{
+  padding: 80px 140px;
 }

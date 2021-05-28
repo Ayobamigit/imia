@@ -1,0 +1,19 @@
+.accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    // background-color: #21aeca;
+}
+
+.accordion-title-text{
+    font-size: 22px;
+    color: var(--fontColor);
+    margin-bottom: 0px !important;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.accordion-icon{
+    fill: #000000;
+}

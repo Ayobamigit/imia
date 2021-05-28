@@ -41,6 +41,9 @@ const CheckOutSuccess = lazy(()=>import('./pages/Buyer/CheckOut/CheckOutSuccess'
 //Wishlist page
 const Wishlist = lazy(()=>import('./pages/Buyer/Wishlist/Wishlist'));
 
+//Product details page
+const ProductDetails = lazy(()=>import('./pages/Buyer/ProductDetails/ProductDetails'));
+
 function App() {
   return (
     <>
@@ -87,6 +90,9 @@ function App() {
 
           {/* Wishlist page */}
           <Route path='/wishlist' exact component={Wishlist} />
+
+          {/* Product details page */}
+          <Route path='/product-details' exact component={ProductDetails} />
 
         </Switch>
       </Suspense>

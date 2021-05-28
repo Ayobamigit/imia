@@ -18,9 +18,9 @@ import Pawpaw from '../../assets/img/pawpaw.png';
 import Akara from '../../assets/img/akara.png';
 import Black from '../../assets/img/black.png';
 
-const ProductGrid = () => {
+const ProductGrid = (props) => {
     return (
-        <div className="grid-container mt-40 mb-80">
+        <div className={`grid-container ${props.className ? props.className : ''}`}>
             <div className="grid-item">
                 <div className="product">
                     <Shoe />
