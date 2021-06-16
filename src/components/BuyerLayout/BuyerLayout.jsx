@@ -4,18 +4,18 @@ import SideDrawer from '../UI/SideDrawer/SideDrawer';
 import BuyerFooter from './BuyerFooter/BuyerFooter';
 import BuyerHeader from './BuyerHeader/BuyerHeader';
 import './BuyerLayout.scss';
-import Account_dropdown from './LayoutElements/Account_dropdown';
-import Country_dropdown from './LayoutElements/Country_dropdown';
-import Sign_in from './LayoutElements/Sign_in';
-import Sign_up from './LayoutElements/Sign_up';
-import Reset_password from './LayoutElements/Reset_password';
-import Create_password from './LayoutElements/Create_password';
+import AccountDropdown from './LayoutElements/Account_dropdown';
+import CountryDropdown from './LayoutElements/Country_dropdown';
+import SignIn from './LayoutElements/Sign_in';
+import SignUp from './LayoutElements/Sign_up';
+import ResetPassword from './LayoutElements/Reset_password';
+import CreatePassword from './LayoutElements/Create_password';
 import Basket from './LayoutElements/Basket';
 
 export const BuyerLayoutContext = createContext();
 
 const BuyerLayout = (props) => {
-    const authToken = true;
+    const authToken = false;
     const [state, setState] = useState({
         dropElement: '',
         sideElement:'',
@@ -74,9 +74,9 @@ const BuyerLayout = (props) => {
     const dropDownRenderer = () =>{
         switch(dropElement) {
            case 'country':
-              return <Country_dropdown />;
+              return <CountryDropdown />;
            case 'account':
-              return <Account_dropdown/>;
+              return <AccountDropdown/>;
            default:
               return null
         }
@@ -85,13 +85,13 @@ const BuyerLayout = (props) => {
     const sideBarRenderer = () =>{
         switch(sideElement) {
            case 'sign-in':
-              return <Sign_in />;
+              return <SignIn />;
            case 'sign-up':
-              return <Sign_up />;
+              return <SignUp />;
             case 'forgot':
-                return <Reset_password />;
+                return <ResetPassword />;
             case 'new-password':
-                return <Create_password />;
+                return <CreatePassword />;
             case 'basket':
                 return <Basket />
            default:

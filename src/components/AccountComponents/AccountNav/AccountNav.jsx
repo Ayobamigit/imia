@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { NavLink } from 'react-bootstrap';
+// import { NavLink } from 'react-bootstrap';
 import { AccountsContext } from '../../../pages/Merchant/Account/Account';
 
 const AccountNav = () => {

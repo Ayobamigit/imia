@@ -5,18 +5,18 @@ import {ReactComponent as Star} from '../../assets/icons/star.svg';
 import Fruit from '../../assets/img/fruit.png';
 import Pan from '../../assets/img/pan.png';
 import Watch from '../../assets/img/watch.png';
-import Ring from '../../assets/img/ring.png';
-import Brown from '../../assets/img/brown-shoe.png';
-import White from '../../assets/img/white.png';
-import Cream from '../../assets/img/cream.png';
-import Okro from '../../assets/img/okro.png';
-import Balm from '../../assets/img/balm.png';
-import Tissue from '../../assets/img/tissue.png';
-import Phone from '../../assets/img/phone.png';
-import Heels from '../../assets/img/heels.png';
-import Pawpaw from '../../assets/img/pawpaw.png';
-import Akara from '../../assets/img/akara.png';
-import Black from '../../assets/img/black.png';
+// import Ring from '../../assets/img/ring.png';
+// import Brown from '../../assets/img/brown-shoe.png';
+// import White from '../../assets/img/white.png';
+// import Cream from '../../assets/img/cream.png';
+// import Okro from '../../assets/img/okro.png';
+// import Balm from '../../assets/img/balm.png';
+// import Tissue from '../../assets/img/tissue.png';
+// import Phone from '../../assets/img/phone.png';
+// import Heels from '../../assets/img/heels.png';
+// import Pawpaw from '../../assets/img/pawpaw.png';
+// import Akara from '../../assets/img/akara.png';
+// import Black from '../../assets/img/black.png';
 
 const ProductGrid = (props) => {
     return (

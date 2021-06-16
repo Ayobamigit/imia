@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import Divider from '../../UI/Divider/Divider';
-import {ReactComponent as Image} from '../../../assets/icons/Image.svg';
-import {ReactComponent as SearchIcon} from '../../../assets/icons/greysearch.svg';
+// import Divider from '../../UI/Divider/Divider';
+// import {ReactComponent as Image} from '../../../assets/icons/Image.svg';
+// import {ReactComponent as SearchIcon} from '../../../assets/icons/greysearch.svg';
 import {ReactComponent as Percent} from '../../../assets/icons/percentage.svg';
 
 
