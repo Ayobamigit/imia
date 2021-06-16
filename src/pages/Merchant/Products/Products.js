@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Container  from 'react-bootstrap/container';
+import {Container}  from 'react-bootstrap';
 import Layout from '../../../components/Layout/Layout';
 import Search from '../../../components/Search/Search';
 import ProductTable from '../../../components/ProductComponents/ProductTable';

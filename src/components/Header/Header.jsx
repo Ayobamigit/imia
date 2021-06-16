@@ -1,6 +1,5 @@
 import React from 'react';
-import Row from 'react-bootstrap/row';
-import Col from 'react-bootstrap/col';
+import {Row, Col} from 'react-bootstrap';
 import './Header.scss';
 
 const Header = (props) => {

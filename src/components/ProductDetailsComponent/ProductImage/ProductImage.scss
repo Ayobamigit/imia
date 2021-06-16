@@ -1,4 +1,16 @@
 .product-image{
     background-color: var(--mainColor);
     border-radius: 8px;
+    // display: grid;
+    // grid-template-columns: auto auto;
+}
+
+.product-image-grid{
+    border-right: 1px solid rgba(179, 179, 179, 0.1);
+    padding: 43px 108px;
+}
+
+.product-details-grid{
+    // border-right: 1px solid rgba(179, 179, 179, 0.1);
+    padding: 40px;
 }

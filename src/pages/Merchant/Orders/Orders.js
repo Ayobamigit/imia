@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react'
-import Container from 'react-bootstrap/container';
+import {Container} from 'react-bootstrap';
 import EmptyState from '../../../components/EmptyState/EmptyState';
 import Layout from '../../../components/Layout/Layout';
 import CancelledOrders from '../../../components/OrderComponents/CancelledOrders';
