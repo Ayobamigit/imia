@@ -5,6 +5,7 @@ import {ReactComponent as Star} from '../../assets/icons/star.svg';
 import Fruit from '../../assets/img/fruit.png';
 import Pan from '../../assets/img/pan.png';
 import Watch from '../../assets/img/watch.png';
+import { useHistory } from 'react-router-dom';
 // import Ring from '../../assets/img/ring.png';
 // import Brown from '../../assets/img/brown-shoe.png';
 // import White from '../../assets/img/white.png';
@@ -19,9 +20,10 @@ import Watch from '../../assets/img/watch.png';
 // import Black from '../../assets/img/black.png';
 
 const ProductGrid = (props) => {
+    const history = useHistory();
     return (
         <div className={`grid-container ${props.className ? props.className : ''}`}>
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     <Shoe />
                 </div>
@@ -40,7 +42,7 @@ const ProductGrid = (props) => {
                     <span className="quantity">(240)</span>
                 </div>
             </div> 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Fruit /> */}
                     <img src={Fruit} alt="Profile"/>
@@ -60,7 +62,7 @@ const ProductGrid = (props) => {
                     <span className="quantity">(240)</span>
                 </div>
             </div>   
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Pan} alt="Profile"/>
@@ -80,7 +82,7 @@ const ProductGrid = (props) => {
                     <span className="quantity">(240)</span>
                 </div>
             </div> 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Watch} alt="Profile"/>

@@ -17,11 +17,13 @@ import Heels from '../../assets/img/heels.png';
 import Pawpaw from '../../assets/img/pawpaw.png';
 import Akara from '../../assets/img/akara.png';
 import Black from '../../assets/img/black.png';
+import { useHistory } from 'react-router-dom';
 
 const ProductGrid = () => {
+    const history = useHistory();
     return (
         <div className="grid-container mt-40 mb-80">
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     <Shoe />
                 </div>
@@ -40,7 +42,7 @@ const ProductGrid = () => {
                     <span className="quantity">(240)</span>
                 </div>
             </div> 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Fruit /> */}
                     <img src={Fruit} alt="Profile"/>
@@ -60,7 +62,7 @@ const ProductGrid = () => {
                     <span className="quantity">(240)</span>
                 </div>
             </div>   
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Pan} alt="Profile"/>
@@ -80,7 +82,7 @@ const ProductGrid = () => {
                     <span className="quantity">(240)</span>
                 </div>
             </div> 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Watch} alt="Profile"/>
@@ -101,7 +103,7 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Cream} alt="Profile"/>
@@ -123,7 +125,7 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={White} alt="Profile"/>
@@ -144,7 +146,7 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Brown} alt="Profile"/>
@@ -165,7 +167,7 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Ring} alt="Profile"/>
@@ -186,7 +188,7 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Okro} alt="Profile"/>
@@ -208,7 +210,7 @@ const ProductGrid = () => {
                 </div>
             </div> 
 
-            <div className="grid-item">
+            <div className="grid-item" onClick={()=>history.push('/product-details')}>
                 <div className="product">
                     {/* <Shoe /> */}
                     <img src={Balm} alt="Profile"/>

@@ -1,8 +1,10 @@
 import React from 'react';
 import BuyerLayout from '../../../components/BuyerLayout/BuyerLayout';
 import {ReactComponent as Success} from '../../../assets/icons/done.svg';
+import { useHistory } from 'react-router-dom';
 
 const CheckOutSuccess = () => {
+    const history= useHistory();
     return (
         <BuyerLayout>
             <div className="checkout-success">
@@ -26,7 +28,7 @@ const CheckOutSuccess = () => {
                     <div className="prev-button mr-16">
                     Shop again
                     </div>
-                    <div className="general-button">
+                    <div className="general-button" onClick={()=>history.push("/buyer-account/orders")}>
                     Track order
                 </div>
             </div>

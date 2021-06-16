@@ -3,10 +3,11 @@ import { Col, Row } from 'react-bootstrap';
 import Divider from '../../UI/Divider/Divider';
 import {ReactComponent as EyeClosed} from '../../../assets/icons/eye.svg';
 import {ReactComponent as EyeOpened} from '../../../assets/icons/eyeOpen.svg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 const SignInForm = () => {
+    const history = useHistory();
     const [state, setState] = useState({
         isPasswordShown: true
     })
@@ -49,7 +50,7 @@ const SignInForm = () => {
                     </Col>
                 </Row>
 
-                <div className="general-button full-width">
+                <div className="general-button full-width" onClick={()=>history.push('/dashboard')}>
                 Log in to your account
                 </div>
             </form>

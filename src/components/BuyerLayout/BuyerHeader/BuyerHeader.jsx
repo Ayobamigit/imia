@@ -7,11 +7,12 @@ import {ReactComponent as Down} from '../../../assets/icons/down.svg';
 import {ReactComponent as WishList} from '../../../assets/icons/heart.svg';
 import {ReactComponent as Basket} from '../../../assets/icons/orders.svg';
 import { BuyerLayoutContext } from '../BuyerLayout';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 const BuyerHeader = () => {
     const {onClickDropDown, onOpenSideBar, authToken, state:{basketList}} = useContext(BuyerLayoutContext);
+    const history = useHistory();
     return (
         <div className="buyer-header">
             <div className="primary-header">
@@ -20,7 +21,7 @@ const BuyerHeader = () => {
             <div className="secondary-header">
                 <Row>
                     <Col lg={1}>
-                        <h1 className="secondary-header-title  cursor-pointer">
+                        <h1 className="secondary-header-title  cursor-pointer" onClick={()=>history.push('/home')}>
                             IMIA
                         </h1>
                     </Col>
