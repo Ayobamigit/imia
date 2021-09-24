@@ -31,31 +31,31 @@ const ProductReview = () => {
                     </Row> */}
                     
                     <div className="review">
-                        <p className="bar-text text-dark">5 stars</p>
+                        <p className="bar-text text-darker">5 stars</p>
                         <ProgressBar now={80} bsPrefix="progress" className="mt-05"/>
                         <p className="bar-text">156</p>
                     </div>
 
                     <div className="review">
-                        <p className="bar-text text-dark">4 stars</p>
+                        <p className="bar-text text-darker">4 stars</p>
                         <ProgressBar now={30} bsPrefix="progress" className="mt-05"/>
                         <p className="bar-text">68</p>
                     </div>
 
                     <div className="review">
-                        <p className="bar-text text-dark">3 stars</p>
+                        <p className="bar-text text-darker">3 stars</p>
                         <ProgressBar now={20} bsPrefix="progress" className="mt-05"/>
                         <p className="bar-text">11</p>
                     </div>
 
                     <div className="review">
-                        <p className="bar-text text-dark">2 stars</p>
+                        <p className="bar-text text-darker">2 stars</p>
                         <ProgressBar now={15} bsPrefix="progress" className="mt-05"/>
                         <p className="bar-text">3</p>
                     </div>
 
                     <div className="review">
-                        <p className="bar-text text-dark">1 star &nbsp;</p>
+                        <p className="bar-text text-darker">1 star &nbsp;</p>
                         <ProgressBar now={10} bsPrefix="progress" className="mt-05"/>
                         <p className="bar-text">2</p>
                     </div>

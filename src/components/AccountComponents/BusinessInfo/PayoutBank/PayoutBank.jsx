@@ -22,14 +22,14 @@ const PayoutBank = () => {
                 <Row className="formgroup">
                     <Col lg={6}>
                         <label>Account number</label>
-                        <div>
+                        <div className="input-group">
                             <input type="text" className="formcontrol" placeholder="Enter account number" />
                         </div>
                         
                     </Col>
                     <Col lg={6}>
                         <label>Account name</label>
-                        <div>
+                        <div className="input-group">
                             <input type="text" className="formcontrol" placeholder="Account name goes here" disabled />
                         </div>
                     </Col>

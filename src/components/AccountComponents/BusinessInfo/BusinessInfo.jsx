@@ -9,10 +9,15 @@ import AddAddress from './Address/AddAddress'
 import BusinessInfoTitle from './BusinessInfoTitle/BusinessInfoTitle'
 import PayoutBank from './PayoutBank/PayoutBank'
 import Website from './Website/Website'
+import Verification from './Verification/Verification'
+import axios from 'axios'
+import {kycUpload} from '../../../utils/urls'
 
 const BusinessInfo = () => {
+    const { token } = JSON.parse(localStorage.getItem('userDetails'));
     const [state, setState] = useState({
-        addAddress: false
+        addAddress: false,
+        document:''
     })
 
     const onClickAdd = () =>{
@@ -27,6 +32,51 @@ const BusinessInfo = () => {
             ...state,
             addAddress: false
         }))
+    }
+
+    const onFileChange = (event) => {
+        debugger;
+        // setState({
+        //     ...state,
+        //     upload: true
+        // })
+        let file = event.target.files[0];
+        let nameOfField = event.target.name;
+        let reader = new FileReader();
+        if (file) {
+            reader.readAsDataURL(file);
+            reader.onloadend = (e) => {
+                let reqBody = {
+                    verificationNumber: "1234567890",
+                    document: e.target.result,  
+                }
+                axios({
+                    url:`${kycUpload}`,
+                    method: 'post',
+                    headers:{
+                        'Content-Type': 'application/json',
+                        'x-access-token': `${token}`
+                    },
+                    data: reqBody
+                })
+                // .then(resp=>{
+                //     setState({
+                //         ...state,
+                //         upload: false
+                //     })
+                //     if(resp.status === 200){
+                //         setState({
+                //             ...state,
+                //             // [nameOfField]: reader.result
+                //             [nameOfField]: resp.data.secure_url
+                //         })
+                //     }else{
+                //         swal("Ooops!", "An error occured while uploading image", "error")
+                //     }
+                // })
+
+            }
+        }
     }
 
     const {addAddress} = state;
@@ -57,13 +107,17 @@ const BusinessInfo = () => {
 
             {/* Verification Section */}
             <Row>
-                <Col lg={6}>
+                <Col lg={4}>
                     <BusinessInfoTitle
                         title="Verification"
                         description="Upload verification document"
                     />
                 </Col>
-                <Col lg={6}></Col>
+                <Col lg={8}>
+                    <Verification
+                        onFileChange={onFileChange}
+                    />
+                </Col>
             </Row>
 
             {/* End of Verification section */}

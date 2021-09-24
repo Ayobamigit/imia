@@ -95,7 +95,7 @@ const BuyerLayout = (props) => {
             case 'basket':
                 return <Basket />
            default:
-              return null
+               return null
         }
     }
 

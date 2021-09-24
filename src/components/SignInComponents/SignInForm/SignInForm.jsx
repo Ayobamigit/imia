@@ -1,25 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Divider from '../../UI/Divider/Divider';
 import {ReactComponent as EyeClosed} from '../../../assets/icons/eye.svg';
 import {ReactComponent as EyeOpened} from '../../../assets/icons/eyeOpen.svg';
-import { Link, useHistory } from 'react-router-dom';
-
+import { Link} from 'react-router-dom';
+import { useContext } from 'react';
+import { LoginContext } from '../../../pages/Merchant/SignIn/MainLogin/MainLogin';
+import SubmitLoader from '../../SubmitLoader/SubmitLoader';
 
 const SignInForm = () => {
-    const history = useHistory();
-    const [state, setState] = useState({
-        isPasswordShown: true
-    })
+    const {state:{isPasswordShown, isLoggingIn}, onChange, togglePassword, onClickLogin} = useContext(LoginContext);
 
-    const togglePassword = () =>{
-        setState(state=>({
-            ...state,
-            isPasswordShown  : !isPasswordShown
-        }))
-    }
-
-    const {isPasswordShown} = state;
     return (
         <div className="signIn-Form">
             <h3 className="signIn-Form-title-heading">Welcome back</h3>
@@ -30,7 +21,13 @@ const SignInForm = () => {
                     <Col>
                         <label>Email address</label>
                         <div className="input-group">
-                            <input type="email" className="formcontrol" placeholder="eg. anwuli@gmail.com" />
+                            <input 
+                                type="email" 
+                                className="formcontrol" 
+                                placeholder="eg. anwuli@gmail.com"
+                                name="email"
+                                onChange = {onChange}
+                            />
                         </div>
                     </Col>
                 </Row>
@@ -39,7 +36,13 @@ const SignInForm = () => {
                     <Col>
                         <label>Password <span className="forgot-password"><Link to="reset-password"><u>Forgot password?</u></Link></span></label>
                         <div className="input-group">
-                            <input type={isPasswordShown ? "text" : "password"} className="formcontrol" placeholder="Type your password" />
+                            <input 
+                                type={isPasswordShown ? "text" : "password"} 
+                                className="formcontrol" 
+                                placeholder="Type your password"
+                                name="password"
+                                onChange = {onChange}
+                            />
                             {
                                 isPasswordShown ?
                                 <EyeClosed className="profile-password-icon" onClick={togglePassword} />
@@ -50,8 +53,14 @@ const SignInForm = () => {
                     </Col>
                 </Row>
 
-                <div className="general-button full-width" onClick={()=>history.push('/dashboard')}>
-                Log in to your account
+                <div className="general-button full-width" onClick={onClickLogin}>
+                    {
+                        isLoggingIn ?
+                        <SubmitLoader />
+                        :
+                        'Log in to your account'
+                    }
+                    
                 </div>
             </form>
 

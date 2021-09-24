@@ -51,7 +51,7 @@ const ProductImage = () => {
                 </div>
 
                 <div className="mb-30">
-                    <p  className="vendor-country text-dark bold">Select Color</p>
+                    <p  className="vendor-country text-darker bold">Select Color</p>
                     <div className="transparent-button">Blue</div>
                     <div className="ship-button color-button ml-16">Red</div>
                     <div className="transparent-button ml-16">Grey</div>
@@ -59,7 +59,7 @@ const ProductImage = () => {
 
                 <div className="vendor-wish mb-30">
                     <div>
-                        <p className="vendor-country text-dark bold">Select Size</p>
+                        <p className="vendor-country text-darker bold">Select Size</p>
                         <div className="ship-button color-button">XXL</div>
                         <div className="transparent-button ml-16">XL</div>
                     </div>

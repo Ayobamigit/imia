@@ -12,7 +12,7 @@ const IndividualBuyerOrder = () => {
     return (
         <div className="buyer-individual-order">
             <p className="buyer-individual-text">
-                <span onClick={()=>{onRouteChange(oldRoute)}} className="cursor-pointer">My orders</span> / <span className="bold text-dark">{orderId}</span>
+                <span onClick={()=>{onRouteChange(oldRoute)}} className="cursor-pointer">My orders</span> / <span className="bold text-darker">{orderId}</span>
             </p>
 
             <Row>

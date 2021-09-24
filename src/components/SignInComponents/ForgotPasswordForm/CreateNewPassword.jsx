@@ -61,7 +61,7 @@ const CreateNewPassword = () => {
             <Divider />
             
             <div className="sign-first inmt-15">
-                <h3 className="sign-first-text">Remember password? <span className="get-started"><Link to="log-in"><u>Log in</u></Link></span> </h3>
+                <h3 className="sign-first-text">Remember password? <span className="get-started"><Link to="vendor-log-in"><u>Log in</u></Link></span> </h3>
             </div>
         </div>
     )

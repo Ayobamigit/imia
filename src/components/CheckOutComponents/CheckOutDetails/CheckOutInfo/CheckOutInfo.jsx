@@ -9,7 +9,7 @@ const CheckOutInfo = () => {
             {
                 !authToken ?
                     <p className="checkout-desc">
-                        <u className="bold text-dark">Log in</u> or <u className="bold text-dark">Sign up</u>  to use your saved details and checkout faster. Alternatively, just enter your email address to checkout as a guest. 
+                        <u className="bold text-darker">Log in</u> or <u className="bold text-darker">Sign up</u>  to use your saved details and checkout faster. Alternatively, just enter your email address to checkout as a guest. 
                     </p>
                 :
                 null

@@ -4,20 +4,12 @@ import Divider from '../../UI/Divider/Divider';
 import {ReactComponent as EyeClosed} from '../../../assets/icons/eye.svg';
 import {ReactComponent as EyeOpened} from '../../../assets/icons/eyeOpen.svg';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { SignUpContext } from '../../../pages/Merchant/SignIn/SignUp/SignUp';
+import SubmitLoader from '../../SubmitLoader/SubmitLoader';
 
 const SignUpForm = () => {
-    const [state, setState] = useState({
-        isPasswordShown: true
-    })
-
-    const togglePassword = () =>{
-        setState(state=>({
-            ...state,
-            isPasswordShown  : !isPasswordShown
-        }))
-    }
-
-    const {isPasswordShown} = state;
+    const {state:{isPasswordShown, isLoading}, togglePassword, createMerchant, onChange} = useContext(SignUpContext)
     return (
         <div className="signIn-Form">
             <h3 className="signIn-Form-title-heading">Create your account</h3>
@@ -28,14 +20,26 @@ const SignUpForm = () => {
                     <Col lg={6}>
                         <label>First name</label>
                         <div className="input-group">
-                            <input type="text" className="formcontrol" placeholder="eg. Anwuli" />
+                            <input 
+                                type="text" 
+                                className="formcontrol" 
+                                placeholder="eg. Anwuli" 
+                                onChange={onChange}
+                                name="firstName"
+                            />
                         </div>
                     </Col>
 
                     <Col lg={6}>
                         <label>Last name</label>
                         <div className="input-group">
-                            <input type="text" className="formcontrol" placeholder="eg. Msilanga" />
+                            <input 
+                                type="text" 
+                                className="formcontrol" 
+                                placeholder="eg. Msilanga"
+                                onChange={onChange}
+                                name="lastName" 
+                            />
                         </div>
                     </Col>
                 </Row>
@@ -43,7 +47,13 @@ const SignUpForm = () => {
                     <Col>
                         <label>Email address</label>
                         <div className="input-group">
-                            <input type="email" className="formcontrol" placeholder="eg. anwuli@gmail.com" />
+                            <input 
+                                type="email" 
+                                className="formcontrol" 
+                                placeholder="eg. anwuli@gmail.com" 
+                                onChange={onChange}
+                                name="email"
+                            />
                         </div>
                     </Col>
                 </Row>
@@ -52,7 +62,13 @@ const SignUpForm = () => {
                     <Col>
                         <label>Business name</label>
                         <div className="input-group">
-                            <input type="text" className="formcontrol" placeholder="Enter the name of your business" />
+                            <input 
+                                type="text" 
+                                className="formcontrol" 
+                                placeholder="Enter the name of your business" 
+                                onChange={onChange}
+                                name="businessName"
+                            />
                         </div>
                     </Col>
                 </Row>
@@ -61,7 +77,13 @@ const SignUpForm = () => {
                     <Col>
                         <label>Create password</label>
                         <div className="input-group">
-                            <input type={isPasswordShown ? "text" : "password"} className="formcontrol" placeholder="Type your password" />
+                            <input 
+                                type={isPasswordShown ? "text" : "password"} 
+                                className="formcontrol" 
+                                placeholder="Type your password" 
+                                onChange={onChange}
+                                name="password"
+                            />
                             {
                                 isPasswordShown ?
                                 <EyeClosed className="profile-password-icon" onClick={togglePassword} />
@@ -72,8 +94,13 @@ const SignUpForm = () => {
                     </Col>
                 </Row>
 
-                <div className="general-button full-width">
-                Create your account
+                <div className="general-button full-width" onClick={createMerchant}>
+                    {
+                        isLoading ?
+                        <SubmitLoader />
+                        :
+                        'Create your account'
+                    }
                 </div>
             </form>
 
@@ -84,7 +111,7 @@ const SignUpForm = () => {
             <Divider />
             
             <div className="sign-first inmt-15">
-                <h3 className="sign-first-text">Already have an account? <span className="get-started"><Link to="log-in"><u>Log in</u></Link></span> </h3>
+                <h3 className="sign-first-text">Already have an account? <span className="get-started"><Link to="vendor-log-in"><u>Log in</u></Link></span> </h3>
             </div>
         </div>
     )

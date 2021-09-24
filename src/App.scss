@@ -1625,7 +1625,7 @@ label{
   line-height: 21px;
 }
 
-.text-dark{
+.text-darker{
   color: var(--fontColor) !important;
 }
 
@@ -1701,6 +1701,8 @@ label{
     margin-right: 10px;
   }
 
+
+
   li{
     margin-bottom: 10px;
   }
@@ -1717,6 +1719,19 @@ label{
         fill: var(--primaryColor);
       }
   }
+}
+
+.verification-upload{
+  padding: 30px 20px 11px;
+  border: 1px dashed rgba(179, 179, 179, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.verify-remove{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .basket-empty-text{
